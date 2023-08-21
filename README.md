@@ -1,5 +1,7 @@
 # capstone-backend
 
+2023 Aug 21 (James)
+
 npm i express dotenv nodemon -validation cors
 
 added 95 packages in 2s
