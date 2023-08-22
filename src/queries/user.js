@@ -1,7 +1,7 @@
 const db = require('../db/dbConfig.js');
 
 //index query
-const getAllUser = async () => {
+const getAllUsers = async () => {
   try {
     const allUser = await db.any("SELECT * FROM user ORDER BY id ASC");
     return { success: true, payload: allUser };
@@ -74,7 +74,7 @@ const updateUser = async (id, userToUpdate) => {
 
 
 module.exports = {
-  getAllUser,
+  getAllUsers,
   getOneUser,
   createUser,
   deleteUser,
