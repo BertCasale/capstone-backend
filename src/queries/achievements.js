@@ -11,9 +11,9 @@ const getAllAchievements = async () => {
 }
 
 //show query
-const getAchievementByName = async (id) => {
+const getOneAchievement = async (id) => {
   try {
-    const oneAchievement = await db.one("SELECT * FROM achievements WHERE name=$1;", id);
+    const oneAchievement = await db.one("SELECT * FROM achievements WHERE id=$1;", id);
     return { success: true, payload: oneAchievement };
   } catch (error) {
     return { success: false, payload: error };
@@ -71,7 +71,7 @@ const updateAchievement = async (id, achievementToUpdate) => {
 
 module.exports = {
   getAllAchievements,
-  getAchievementByName,
+  getOneAchievement,
   createAchievement,
   deleteAchievement,
   updateAchievement

@@ -11,9 +11,9 @@ const getAllLessons = async () => {
 }
 
 //show query
-const getLessonByTitle = async (id) => {
+const getOneLesson = async (id) => {
   try {
-    const oneLesson = await db.one("SELECT * FROM lessons WHERE title=$1;", id);
+    const oneLesson = await db.one("SELECT * FROM lessons WHERE id=$1;", id);
     return { success: true, payload: oneLesson };
   } catch (error) {
     return { success: false, payload: error };
@@ -74,7 +74,7 @@ const updateLesson = async (id, lessonToUpdate) => {
 
 module.exports = {
   getAllLessons,
-  getLessonByTitle,
+  getOneLesson,
   createLesson,
   deleteLesson,
   updateLesson
