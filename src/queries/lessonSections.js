@@ -16,7 +16,7 @@ const getAllLessonSections = async () => {
 contains no criteria to sort sections.
 Used 'id' as placeholder.
 */
-const getLessonSectionsByLessonId = async (id) => {
+const getAllLessonSectionsByLessonId = async (id) => {
   try {
     const lessonSectionsByLessonId = await db.any("SELECT * FROM lesson_sections WHERE lesson_id=$1 ORDER BY id ASC;", id);
     return { success: true, payload: lessonSectionsByLessonId };
@@ -82,7 +82,7 @@ const updateLessonSection = async (id, lessonSectionToUpdate) => {
 
 module.exports = {
   getAllLessonSections,
-  getLessonSectionsByLessonId,
+  getAllLessonSectionsByLessonId,
   createLessonSection,
   deleteLessonSection,
   updateLessonSection
