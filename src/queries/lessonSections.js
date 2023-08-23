@@ -18,8 +18,8 @@ Used 'id' as placeholder.
 */
 const getAllLessonSectionsByLessonId = async (id) => {
   try {
-    const lessonSectionsByLessonId = await db.any("SELECT * FROM lesson_sections WHERE lesson_id=$1 ORDER BY id ASC;", id);
-    return { success: true, payload: lessonSectionsByLessonId };
+    const allLessonSectionsByLessonId = await db.any("SELECT * FROM lesson_sections WHERE lesson_id=$1 ORDER BY id ASC;", id);
+    return { success: true, payload: allLessonSectionsByLessonId };
   } catch (error) {
     return { success: false, payload: error };
   }
