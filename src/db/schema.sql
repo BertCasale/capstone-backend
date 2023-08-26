@@ -18,7 +18,7 @@ CREATE TABLE achievements (
 );
 
 -- Create a table for "users achievements"
-CREATE TABLE products (
+CREATE TABLE users_achievements (
   id SERIAL PRIMARY KEY,
   user_id INT REFERENCES user (id) ON DELETE CASCADE,
   achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
