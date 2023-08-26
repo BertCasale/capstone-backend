@@ -60,7 +60,6 @@ CREATE TABLE lesson_sections (
   title VARCHAR(80) NOT NULL,
   information_text VARCHAR(300) NOT NULL,
   interactive_element VARCHAR(80),
-  correct_feedback VARCHAR(120),
-  incorrect_feedback VARCHAR(120),
-  lesson_section_completion BOOLEAN DEFAULT FALSE
+  correct_feedback VARCHAR(400),
+  incorrect_feedback VARCHAR(400)
 );
