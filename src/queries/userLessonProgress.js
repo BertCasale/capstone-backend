@@ -11,10 +11,10 @@ const getAllUserLessonProgress = async () => {
 }
 
 //show query
-const getAllUserLessonProgressByLessonId = async (id) => {
+const getAllUserLessonProgressByUserId = async (id) => {
   try {
-    const allUserLessonProgressByLessonId = await db.any("SELECT * FROM user_lesson_progress WHERE lesson_id=$1 ORDER BY id ASC;", id);
-    return { success: true, payload: allUserLessonProgressByLessonId };
+    const allUserLessonProgressByUserId = await db.any("SELECT * FROM user_lesson_progress WHERE user_id=$1 ORDER BY id ASC;", id);
+    return { success: true, payload: allUserLessonProgressByUserId };
   } catch (error) {
     return { success: false, payload: error };
   }
@@ -71,7 +71,7 @@ const updateUserLessonProgress = async (id, userLessonProgressToUpdate) => {
 
 module.exports = {
   getAllUserLessonProgress,
-  getAllUserLessonProgressByLessonId,
+  getAllUserLessonProgressByUserId,
   createUserLessonProgress,
   deleteUserLessonProgress,
   updateUserLessonProgress
