@@ -1,4 +1,4 @@
--- psql -U postgres -f db/seed.sql
+-- psql -U postgres -f src/db/seed.sql
 
 \c acorn_dev;
 

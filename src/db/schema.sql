@@ -1,4 +1,4 @@
--- psql -U postgres -f db/schema.sql
+-- psql -U postgres -f src/db/schema.sql
 
 -- IF already exists, drop it.
 DROP DATABASE IF EXISTS acorn_dev;
@@ -8,6 +8,16 @@ CREATE DATABASE acorn_dev;
 
 -- Connect to the db
 \c acorn_dev;
+
+-- Create a table for "user"
+CREATE TABLE user (
+  id SERIAL PRIMARY KEY,
+  registration_datetime DATE NOT NULL,
+  username VARCHAR(80) NOT NULL,
+  email VARCHAR(120),
+  password VARCHAR(80) NOT NULL,
+  profile_picture VARCHAR (120)
+);
 
 -- Create a table for "achievements"
 CREATE TABLE achievements (
@@ -22,16 +32,6 @@ CREATE TABLE users_achievements (
   id SERIAL PRIMARY KEY,
   user_id INT REFERENCES user (id) ON DELETE CASCADE,
   achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
-);
-
--- Create a table for "user"
-CREATE TABLE user (
-  id SERIAL PRIMARY KEY,
-  registration_datetime DATE NOT NULL,
-  username VARCHAR(80) NOT NULL,
-  email VARCHAR(120),
-  password VARCHAR(80) NOT NULL,
-  profile_picture VARCHAR (120)
 );
 
 -- Create a table for "user lesson progress"
