@@ -8,28 +8,28 @@ VALUES
 ('Completed Elements of Art', 'Awarded on completing Elements of Art lesson', 'none'),           
 ('Completed Principles of Art', 'Awarded on completing Principles of Art lesson', 'none');
 
-INSERT INTO users_achievements
-(user_id, achievement_id)
+INSERT INTO client_achievements
+(client_id, achievement_id)
 VALUES
 (1,1),
 (2,1);
 
-INSERT INTO user
+INSERT INTO clients
 (registration_datetime, username, email, password, profile_picture)
 VALUES
 ('2023-08-01', 'Alexia Apple', 'alexia@gmail.com', 'apassword', 'none'),
 ('2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none');
 
-INSERT INTO user_lesson_progress
-(user_id, lesson_id, lesson_completion_status)
+INSERT INTO client_lessons_progress
+(client_id, lesson_id, lesson_completion_status)
 VALUES
 (1, 1, TRUE),
 (2, 1, TRUE);
 
 INSERT INTO lessons
-(category, title, duration, difficulty, description, materials)
+(category, title, duration, difficulty, description, materials, preview)
 VALUES
-('Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper');
+('Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper', 'none');
 
 INSERT INTO lesson_sections
 (lesson_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback, lesson_section_completion)

@@ -9,8 +9,8 @@ CREATE DATABASE acorn_dev;
 -- Connect to the db
 \c acorn_dev;
 
--- Create a table for "user"
-CREATE TABLE user (
+-- Create a table for "clients"
+CREATE TABLE clients (
   id SERIAL PRIMARY KEY,
   registration_datetime DATE NOT NULL,
   username VARCHAR(80) NOT NULL,
@@ -27,18 +27,18 @@ CREATE TABLE achievements (
   image VARCHAR(120) NOT NULL
 );
 
--- Create a table for "users achievements"
-CREATE TABLE users_achievements (
+-- Create a table for "client achievements"
+CREATE TABLE client_achievements (
   id SERIAL PRIMARY KEY,
-  user_id INT REFERENCES user (id) ON DELETE CASCADE,
+  client_id INT REFERENCES clients (id) ON DELETE CASCADE,
   achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
 );
 
--- Create a table for "user lesson progress"
-CREATE TABLE user_lesson_progress (
+-- Create a table for "client lessons progress"
+CREATE TABLE client_lessons_progress (
   id SERIAL PRIMARY KEY,
-  user_id INT REFERENCES user (id) ON DELETE CASCADE,
-  achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
+  client_id INT REFERENCES clients (id) ON DELETE CASCADE,
+  lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE
   lesson_completion_status BOOLEAN DEFAULT FALSE
 );
 
@@ -50,7 +50,8 @@ CREATE TABLE lessons (
   duration VARCHAR(40) NOT NULL,
   difficulty VARCHAR(15) NOT NULL,
   description VARCHAR(400) NOT NULL,
-  materials VARCHAR(80)
+  materials VARCHAR(80),
+  preview VARCHAR(80)
 );
 
 -- Create a table for "lesson sections"
