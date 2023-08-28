@@ -9,12 +9,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const achievementsController = require("./controllers/achievementsController.js");
-const clientAchievementsController = require("./controllers/clientAchievementsController.js");
-const clientLessonsProgressController = require("./controllers/clientLessonsProgressController.js");
-const clientsController = require("./controllers/clientsController.js");
-const lessonsController = require("./controllers/lessonsController.js");
-const lessonSectionsController = require("./controllers/lessonSectionsController.js");
+const achievementsController = require("./src/controllers/achievementsController.js");
+const clientAchievementsController = require("./src/controllers/clientAchievementsController.js");
+const clientLessonsProgressController = require("./src/controllers/clientLessonsProgressController.js");
+const clientsController = require("./src/controllers/clientsController.js");
+const lessonsController = require("./src/controllers/lessonsController.js");
+const lessonSectionsController = require("./src/controllers/lessonSectionsController.js");
 
 app.use("/achievements", achievementsController);
 app.use("/clientAchievements", clientAchievementsController);
