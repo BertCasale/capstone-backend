@@ -27,13 +27,15 @@ const createLesson = async (lessonToAdd) => {
     title,
     duration,
     difficulty,
-    description
+    description,
+    materials,
+    preview
   } = lessonToAdd;
 
   try {
     const newLesson = await db.one(
-      "INSERT INTO lessons (category, title, duration, difficulty, description) VALUES ($1, $2, $3, $4, $5) RETURNING *;",
-      [category, title, duration, difficulty, description]
+      "INSERT INTO lessons (category, title, duration, difficulty, description, materials, preview) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;",
+      [category, title, duration, difficulty, description, materials, preview]
     );
     return { success: true, payload: newLesson };
   } catch (error) {
@@ -58,13 +60,15 @@ const updateLesson = async (id, lessonToUpdate) => {
     title,
     duration,
     difficulty,
-    description
+    description,
+    materials,
+    preview
   } = lessonToUpdate;
 
   try {
     const updatedLesson = await db.one(
-      "UPDATE lessons SET category=$1, title=$2, duration=$3, difficulty=$4, description=$5 WHERE id=$6 RETURNING *;",
-      [category, title, duration, difficulty, description, id]
+      "UPDATE lessons SET category=$1, title=$2, duration=$3, difficulty=$4, description=$5, materials=$6, preview=$7 WHERE id=$8 RETURNING *;",
+      [category, title, duration, difficulty, description, materials, preview, id]
     );
     return { success: true, payload: updatedLesson };
   } catch (error) {

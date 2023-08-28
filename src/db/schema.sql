@@ -1,4 +1,4 @@
--- psql -U postgres -f db/schema.sql
+-- psql -U postgres -f src/db/schema.sql
 
 -- IF already exists, drop it.
 DROP DATABASE IF EXISTS acorn_dev;
@@ -17,29 +17,14 @@ CREATE TABLE achievements (
   image VARCHAR(120) NOT NULL
 );
 
--- Create a table for "users achievements"
-CREATE TABLE users_achievements (
-  id SERIAL PRIMARY KEY,
-  user_id INT REFERENCES user (id) ON DELETE CASCADE,
-  achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
-);
-
--- Create a table for "user"
-CREATE TABLE user (
+-- Create a table for "clients"
+CREATE TABLE clients (
   id SERIAL PRIMARY KEY,
   registration_datetime DATE NOT NULL,
   username VARCHAR(80) NOT NULL,
   email VARCHAR(120),
   password VARCHAR(80) NOT NULL,
   profile_picture VARCHAR (120)
-);
-
--- Create a table for "user lesson progress"
-CREATE TABLE user_lesson_progress (
-  id SERIAL PRIMARY KEY,
-  user_id INT REFERENCES user (id) ON DELETE CASCADE,
-  achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
-  lesson_completion_status BOOLEAN DEFAULT FALSE
 );
 
 -- Create a table for "lessons"
@@ -50,7 +35,23 @@ CREATE TABLE lessons (
   duration VARCHAR(40) NOT NULL,
   difficulty VARCHAR(15) NOT NULL,
   description VARCHAR(400) NOT NULL,
-  materials VARCHAR(80)
+  materials VARCHAR(80),
+  preview VARCHAR(80)
+);
+
+-- Create a table for "client achievements"
+CREATE TABLE client_achievements (
+  id SERIAL PRIMARY KEY,
+  client_id INT REFERENCES clients (id) ON DELETE CASCADE,
+  achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
+);
+
+-- Create a table for "client lessons progress"
+CREATE TABLE client_lessons_progress (
+  id SERIAL PRIMARY KEY,
+  client_id INT REFERENCES clients (id) ON DELETE CASCADE,
+  lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE,
+  lesson_completion_status BOOLEAN DEFAULT FALSE
 );
 
 -- Create a table for "lesson sections"
