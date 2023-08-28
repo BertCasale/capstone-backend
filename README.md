@@ -7,10 +7,27 @@ Example of .env
 PORT=3000
 PG_HOST=localhost
 PG_PORT=5000
-PG_DATABASE=artacorn_dev
+PG_DATABASE=acorn_dev
 PG_USER=postgres
 
-(can use different PORT and PG_PORT)
+(can use different PORT and PG_PORT).
+If .env file values change, npm start process must shut down then restart to use new .env values.
+
+2023 Aug 28 notes for use:
+
+Ensure Postgres running.
+In terminal, enter
+
+psql -U postgres -f src/db/schema.sql
+psql -U postgres -f src/db/seed.sql
+npm start
+
+in browser
+
+http://localhost:3177/clientLessonsProgress/1
+
+(or similar) to test routes.
+
 
 ==
 
