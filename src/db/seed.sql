@@ -15,9 +15,9 @@ VALUES
 ('2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none', 'Student');
 
 INSERT INTO lessons
-(category, title, duration, difficulty, description, materials, preview)
+(language_id, category, title, duration, difficulty, description, materials, preview)
 VALUES
-('Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper', 'None');
+('English', 'Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper', 'None');
 
 INSERT INTO client_achievements
 (client_id, achievement_id)

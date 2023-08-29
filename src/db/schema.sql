@@ -31,6 +31,7 @@ CREATE TABLE clients (
 -- Create a table for "lessons"
 CREATE TABLE lessons (
   id SERIAL PRIMARY KEY,
+  language_id VARCHAR(20) NOT NULL,
   category VARCHAR(80) NOT NULL,
   title VARCHAR(80) NOT NULL,
   duration VARCHAR(40) NOT NULL,

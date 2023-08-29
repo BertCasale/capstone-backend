@@ -23,6 +23,7 @@ const getOneLesson = async (id) => {
 //create query
 const createLesson = async (lessonToAdd) => {
   const {
+    language_id,
     category,
     title,
     duration,
@@ -34,8 +35,8 @@ const createLesson = async (lessonToAdd) => {
 
   try {
     const newLesson = await db.one(
-      "INSERT INTO lessons (category, title, duration, difficulty, description, materials, preview) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;",
-      [category, title, duration, difficulty, description, materials, preview]
+      "INSERT INTO lessons (language_id, category, title, duration, difficulty, description, materials, preview) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;",
+      [language_id, category, title, duration, difficulty, description, materials, preview]
     );
     return { success: true, payload: newLesson };
   } catch (error) {
@@ -56,6 +57,7 @@ const deleteLesson = async (id) => {
 //update query
 const updateLesson = async (id, lessonToUpdate) => {
   const { 
+    language_id,
     category,
     title,
     duration,
@@ -67,8 +69,8 @@ const updateLesson = async (id, lessonToUpdate) => {
 
   try {
     const updatedLesson = await db.one(
-      "UPDATE lessons SET category=$1, title=$2, duration=$3, difficulty=$4, description=$5, materials=$6, preview=$7 WHERE id=$8 RETURNING *;",
-      [category, title, duration, difficulty, description, materials, preview, id]
+      "UPDATE lessons SET language_id=$1, category=$2, title=$3, duration=$4, difficulty=$5, description=$6, materials=$7, preview=$8 WHERE id=$9 RETURNING *;",
+      [language_id, category, title, duration, difficulty, description, materials, preview, id]
     );
     return { success: true, payload: updatedLesson };
   } catch (error) {
