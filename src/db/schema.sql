@@ -31,7 +31,7 @@ CREATE TABLE clients (
 -- Create a table for "lessons"
 CREATE TABLE lessons (
   id SERIAL PRIMARY KEY,
-  language_id VARCHAR(20) NOT NULL,
+  language_id INT REFERENCES languages (id) ON DELETE CASCADE NOT NULL,
   category VARCHAR(80) NOT NULL,
   title VARCHAR(80) NOT NULL,
   duration VARCHAR(40) NOT NULL,
@@ -44,15 +44,15 @@ CREATE TABLE lessons (
 -- Create a table for "client achievements"
 CREATE TABLE client_achievements (
   id SERIAL PRIMARY KEY,
-  client_id INT REFERENCES clients (id) ON DELETE CASCADE,
-  achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
+  client_id INT REFERENCES clients (id) ON DELETE CASCADE NOT NULL,
+  achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE NOT NULL
 );
 
 -- Create a table for "client lessons progress"
 CREATE TABLE client_lessons_progress (
   id SERIAL PRIMARY KEY,
-  client_id INT REFERENCES clients (id) ON DELETE CASCADE,
-  lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE,
+  client_id INT REFERENCES clients (id) ON DELETE CASCADE NOT NULL,
+  lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE NOT NULL,
   lesson_completion_status BOOLEAN DEFAULT FALSE
 );
 
@@ -60,6 +60,7 @@ CREATE TABLE client_lessons_progress (
 CREATE TABLE lesson_sections (
   id SERIAL PRIMARY KEY,
   lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE,
+  language_id INT REFERENCES languages (id) ON DELETE CASCADE NOT NULL,
   title VARCHAR(80) NOT NULL,
   information_text VARCHAR(300) NOT NULL,
   interactive_element VARCHAR(80),

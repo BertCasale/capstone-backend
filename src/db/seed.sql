@@ -17,7 +17,7 @@ VALUES
 INSERT INTO lessons
 (language_id, category, title, duration, difficulty, description, materials, preview)
 VALUES
-('English', 'Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper', 'None');
+(1, 'Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper', 'None');
 
 INSERT INTO client_achievements
 (client_id, achievement_id)
@@ -32,7 +32,7 @@ VALUES
 (2, 1, TRUE);
 
 INSERT INTO lesson_sections
-(lesson_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback)
+(lesson_id, language_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback)
 VALUES
-(1, 'Introduction', 'Lines are one of the most basic art elements.  They are the underlying foundation of most art.  The qualities of a line can vary in length, direction, and thickness.', 'none', NULL, NULL),
-(1, 'Converging Lines', 'Converging lines, or lines that point in the same direction, draw your eye in to the point where they meet.', 'ConvergingLines', 'Correct!  The lines of the bridge, bridge shadow, sidewalk, and even the building in the back seem to be directing your attention to the couple walking.', 'Hint: Follow the bridge and sidewalk lines to find the area where they meet.');
+(1, 1, 'Introduction', 'Lines are one of the most basic art elements.  They are the underlying foundation of most art.  The qualities of a line can vary in length, direction, and thickness.', 'none', NULL, NULL),
+(1, 1, 'Converging Lines', 'Converging lines, or lines that point in the same direction, draw your eye in to the point where they meet.', 'ConvergingLines', 'Correct!  The lines of the bridge, bridge shadow, sidewalk, and even the building in the back seem to be directing your attention to the couple walking.', 'Hint: Follow the bridge and sidewalk lines to find the area where they meet.');
