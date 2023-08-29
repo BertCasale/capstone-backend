@@ -8,6 +8,12 @@ VALUES
 ('Completed Elements of Art', 'Awarded on completing Elements of Art lesson', 'none'),           
 ('Completed Principles of Art', 'Awarded on completing Principles of Art lesson', 'none');
 
+INSERT INTO ads
+(created_datetime, title, start_datetime, end_datetime, content_title, content_text, content_image, content_map_data)
+VALUES
+('2023-08-29', 'promo1', '2023-08-29', '2023-12-31', 'placeholder1', 'placeholder1_text', 'none', 'none'),
+('2023-08-29', 'promo2', '2023-08-29', '2023-12-31', 'placeholder2', 'placeholder2_text', 'none', 'none'),
+
 INSERT INTO clients
 (registration_datetime, username, email, password, profile_picture, role)
 VALUES
@@ -15,19 +21,19 @@ VALUES
 ('2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none', 'Student');
 
 INSERT INTO languages
-(created_datetime, name)
+(created_datetime, name, image)
 VALUES
-('2023-08-29', 'English (US)'),
-('2023-08-29', '简体中文'),
-('2023-08-29', '中國傳統的'),
-('2023-08-29', 'Español'),
-('2023-08-29', 'عربي'),
-('2023-08-29', 'Português'),
-('2023-08-29', 'bahasa Indonesia'),
-('2023-08-29', 'Français'),
-('2023-08-29', '日本語'),
-('2023-08-29', 'Русский'),
-('2023-08-29', 'Deutsch');
+('2023-08-29', 'English (US)', 'none'),
+('2023-08-29', '简体中文', 'none'),
+('2023-08-29', '中國傳統的', 'none'),
+('2023-08-29', 'Español', 'none'),
+('2023-08-29', 'عربي', 'none'),
+('2023-08-29', 'Português', 'none'),
+('2023-08-29', 'bahasa Indonesia', 'none'),
+('2023-08-29', 'Français', 'none'),
+('2023-08-29', '日本語', 'none'),
+('2023-08-29', 'Русский', 'none'),
+('2023-08-29', 'Deutsch', 'none');
 
 INSERT INTO lessons
 (language_id, category, title, duration, difficulty, description, materials, preview)

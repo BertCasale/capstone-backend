@@ -17,6 +17,19 @@ CREATE TABLE achievements (
   image VARCHAR(120) NOT NULL
 );
 
+-- Create a table for "ads"
+CREATE TABLE ads (
+  id SERIAL PRIMARY KEY,
+  created_datetime DATE NOT NULL,
+  title VARCHAR(120) NOT NULL,
+  start_datetime DATE NOT NULL,
+  end_datetime DATE NOT NULL,
+  content_title VARCHAR(120) NOT NULL,
+  content_text VARCHAR(800) NOT NULL,
+  content_image VARCHAR(80) NOT NULL,
+  content_map_data VARCHAR(800) NOT NULL
+);
+
 -- Create a table for "clients"
 CREATE TABLE clients (
   id SERIAL PRIMARY KEY,
@@ -32,7 +45,8 @@ CREATE TABLE clients (
 CREATE TABLE languages (
   id SERIAL PRIMARY KEY,
   created_datetime DATE NOT NULL,
-  name VARCHAR(20) NOT NULL
+  name VARCHAR(20) NOT NULL,
+  image VARCHAR(80) NOT NULL
 );
 
 -- Create a table for "lessons"

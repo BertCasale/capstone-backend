@@ -24,13 +24,14 @@ const getOneLanguage = async (id) => {
 const createLanguage = async (languageToAdd) => {
   const {
     created_datetime,
-    name
+    name,
+    image
   } = languageToAdd;
 
   try {
     const newLanguage = await db.one(
-      "INSERT INTO languages (created_datetime, name) VALUES ($1, $2) RETURNING *;",
-      [created_datetime, name]
+      "INSERT INTO languages (created_datetime, name, image) VALUES ($1, $2, $3) RETURNING *;",
+      [created_datetime, name, image]
     );
     return { success: true, payload: newLanguage };
   } catch (error) {
@@ -52,13 +53,14 @@ const deleteLanguage = async (id) => {
 const updateLanguage = async (id, languageToUpdate) => {
   const { 
     created_datetime,
-    name
+    name,
+    image
   } = languageToUpdate;
 
   try {
     const updatedLanguage = await db.one(
-      "UPDATE languages SET created_datetime=$1, name=$2 WHERE id=$3 RETURNING *;",
-      [created_datetime, name, id]
+      "UPDATE languages SET created_datetime=$1, name=$2, image=$3 WHERE id=$4 RETURNING *;",
+      [created_datetime, name, image, id]
     );
     return { success: true, payload: updatedLanguage };
   } catch (error) {
