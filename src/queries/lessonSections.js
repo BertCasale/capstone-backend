@@ -29,6 +29,7 @@ const getAllLessonSectionsByLessonId = async (id) => {
 const createLessonSection = async (lessonSectionToAdd) => {
   const {
     lesson_id,
+    language_id,
     title,
     information_text,
     interactive_element,
@@ -38,8 +39,8 @@ const createLessonSection = async (lessonSectionToAdd) => {
 
   try {
     const newLessonSection = await db.one(
-      "INSERT INTO lesson_sections (lesson_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *;",
-      [lesson_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback]
+      "INSERT INTO lesson_sections (lesson_id, language_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;",
+      [lesson_id, language_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback]
     );
     return { success: true, payload: newLessonSection };
   } catch (error) {
@@ -61,6 +62,7 @@ const deleteLessonSection = async (id) => {
 const updateLessonSection = async (id, lessonSectionToUpdate) => {
   const { 
     lesson_id,
+    language_id,
     title,
     information_text,
     interactive_element,
@@ -70,8 +72,8 @@ const updateLessonSection = async (id, lessonSectionToUpdate) => {
 
   try {
     const updatedLessonSection = await db.one(
-      "UPDATE lesson_sections SET lesson_id=$1, title=$2, information_text=$3, interactive_element=$4, correct_feedback=$5, incorrect_feedback=$6 WHERE id=$7 RETURNING *;",
-      [lesson_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback, id]
+      "UPDATE lesson_sections SET lesson_id=$1, language_id=$2, title=$3, information_text=$4, interactive_element=$5, correct_feedback=$6, incorrect_feedback=$7 WHERE id=$8 RETURNING *;",
+      [lesson_id, language_id, title, information_text, interactive_element, correct_feedback, incorrect_feedback, id]
     );
     return { success: true, payload: updatedLessonSection };
   } catch (error) {

@@ -17,6 +17,19 @@ CREATE TABLE achievements (
   image VARCHAR(120) NOT NULL
 );
 
+-- Create a table for "ads"
+CREATE TABLE ads (
+  id SERIAL PRIMARY KEY,
+  created_datetime DATE NOT NULL,
+  title VARCHAR(120) NOT NULL,
+  start_datetime DATE NOT NULL,
+  end_datetime DATE NOT NULL,
+  content_title VARCHAR(120) NOT NULL,
+  content_text VARCHAR(800) NOT NULL,
+  content_image VARCHAR(80) NOT NULL,
+  content_map_data VARCHAR(800) NOT NULL
+);
+
 -- Create a table for "clients"
 CREATE TABLE clients (
   id SERIAL PRIMARY KEY,
@@ -24,12 +37,22 @@ CREATE TABLE clients (
   username VARCHAR(80) NOT NULL,
   email VARCHAR(120),
   password VARCHAR(80) NOT NULL,
-  profile_picture VARCHAR (120)
+  profile_picture VARCHAR (120),
+  role VARCHAR(40)
+);
+
+-- Create a table for "languages"
+CREATE TABLE languages (
+  id SERIAL PRIMARY KEY,
+  created_datetime DATE NOT NULL,
+  name VARCHAR(20) NOT NULL,
+  image VARCHAR(80) NOT NULL
 );
 
 -- Create a table for "lessons"
 CREATE TABLE lessons (
   id SERIAL PRIMARY KEY,
+  language_id INT REFERENCES languages (id) ON DELETE CASCADE NOT NULL,
   category VARCHAR(80) NOT NULL,
   title VARCHAR(80) NOT NULL,
   duration VARCHAR(40) NOT NULL,
@@ -42,15 +65,15 @@ CREATE TABLE lessons (
 -- Create a table for "client achievements"
 CREATE TABLE client_achievements (
   id SERIAL PRIMARY KEY,
-  client_id INT REFERENCES clients (id) ON DELETE CASCADE,
-  achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE
+  client_id INT REFERENCES clients (id) ON DELETE CASCADE NOT NULL,
+  achievement_id INT REFERENCES achievements (id) ON DELETE CASCADE NOT NULL
 );
 
 -- Create a table for "client lessons progress"
 CREATE TABLE client_lessons_progress (
   id SERIAL PRIMARY KEY,
-  client_id INT REFERENCES clients (id) ON DELETE CASCADE,
-  lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE,
+  client_id INT REFERENCES clients (id) ON DELETE CASCADE NOT NULL,
+  lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE NOT NULL,
   lesson_completion_status BOOLEAN DEFAULT FALSE
 );
 
@@ -58,6 +81,7 @@ CREATE TABLE client_lessons_progress (
 CREATE TABLE lesson_sections (
   id SERIAL PRIMARY KEY,
   lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE,
+  language_id INT REFERENCES languages (id) ON DELETE CASCADE NOT NULL,
   title VARCHAR(80) NOT NULL,
   information_text VARCHAR(300) NOT NULL,
   interactive_element VARCHAR(80),
