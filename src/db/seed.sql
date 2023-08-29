@@ -9,10 +9,10 @@ VALUES
 ('Completed Principles of Art', 'Awarded on completing Principles of Art lesson', 'none');
 
 INSERT INTO clients
-(registration_datetime, username, email, password, profile_picture)
+(registration_datetime, username, email, password, profile_picture, role)
 VALUES
-('2023-08-01', 'Alexia Apple', 'alexia@gmail.com', 'apassword', 'none'),
-('2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none');
+('2023-08-01', 'Alexia Apple', 'alexia@gmail.com', 'apassword', 'none', 'Administrator'),
+('2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none', 'Student');
 
 INSERT INTO lessons
 (category, title, duration, difficulty, description, materials, preview)

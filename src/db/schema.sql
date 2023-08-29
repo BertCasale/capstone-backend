@@ -24,7 +24,8 @@ CREATE TABLE clients (
   username VARCHAR(80) NOT NULL,
   email VARCHAR(120),
   password VARCHAR(80) NOT NULL,
-  profile_picture VARCHAR (120)
+  profile_picture VARCHAR (120),
+  role VARCHAR(40)
 );
 
 -- Create a table for "lessons"
