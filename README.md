@@ -73,3 +73,6 @@ utils:  utilities and helpers / shared logic
 test:  not used
 
 test > unit:  similar to src, not used
+
+Sources:
+Language selection based on https://www.internetworldstats.com/stats7.htm

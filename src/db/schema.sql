@@ -28,6 +28,13 @@ CREATE TABLE clients (
   role VARCHAR(40)
 );
 
+-- Create a table for "languages"
+CREATE TABLE languages (
+  id SERIAL PRIMARY KEY,
+  created_datetime DATE NOT NULL,
+  name VARCHAR(20) NOT NULL
+);
+
 -- Create a table for "lessons"
 CREATE TABLE lessons (
   id SERIAL PRIMARY KEY,
