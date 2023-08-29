@@ -18,16 +18,16 @@ INSERT INTO languages
 (created_datetime, name)
 VALUES
 ('2023-08-29', 'English (US)'),
-('2023-08-29', 'Chinese, Simplified'),
-('2023-08-29', 'Chinese, Traditional'),
-('2023-08-29', 'Spanish'),
-('2023-08-29', 'Arabic'),
-('2023-08-29', 'Portuguese'),
-('2023-08-29', 'Indonesian'),
-('2023-08-29', 'French'),
-('2023-08-29', 'Japanese'),
-('2023-08-29', 'Russian'),
-('2023-08-29', 'German');
+('2023-08-29', '简体中文'),
+('2023-08-29', '中國傳統的'),
+('2023-08-29', 'Español'),
+('2023-08-29', 'عربي'),
+('2023-08-29', 'Português'),
+('2023-08-29', 'bahasa Indonesia'),
+('2023-08-29', 'Français'),
+('2023-08-29', '日本語'),
+('2023-08-29', 'Русский'),
+('2023-08-29', 'Deutsch');
 
 INSERT INTO lessons
 (language_id, category, title, duration, difficulty, description, materials, preview)

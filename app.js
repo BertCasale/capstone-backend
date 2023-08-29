@@ -13,6 +13,7 @@ const achievementsController = require("./src/controllers/achievementsController
 const clientAchievementsController = require("./src/controllers/clientAchievementsController.js");
 const clientLessonsProgressController = require("./src/controllers/clientLessonsProgressController.js");
 const clientsController = require("./src/controllers/clientsController.js");
+const languagesController = require("./src/controllers/languagesController.js");
 const lessonsController = require("./src/controllers/lessonsController.js");
 const lessonSectionsController = require("./src/controllers/lessonSectionsController.js");
 
@@ -20,6 +21,7 @@ app.use("/achievements", achievementsController);
 app.use("/clientAchievements", clientAchievementsController);
 app.use("/clientLessonsProgress", clientLessonsProgressController);
 app.use("/clients", clientsController);
+app.use("/languages", languagesController);
 app.use("/lessons", lessonsController);
 app.use("/lessonSections", lessonSectionsController);
 
