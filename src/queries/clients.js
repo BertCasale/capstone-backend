@@ -27,13 +27,14 @@ const createClient = async (clientToAdd) => {
     username,
     email,
     password,
-    profile_picture
+    profile_picture,
+    role
   } = clientToAdd;
 
   try {
     const newClient = await db.one(
-      "INSERT INTO clients (registration_datetime, username, email, password, profile_picture) VALUES ($1, $2, $3, $4, $5) RETURNING *;",
-      [registration_datetime, username, email, password, profile_picture]
+      "INSERT INTO clients (registration_datetime, username, email, password, profile_picture, role) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *;",
+      [registration_datetime, username, email, password, profile_picture, role]
     );
     return { success: true, payload: newClient };
   } catch (error) {
@@ -58,13 +59,14 @@ const updateClient = async (id, clientToUpdate) => {
     username,
     email,
     password,
-    profile_picture
+    profile_picture,
+    role
   } = clientToUpdate;
 
   try {
     const updatedClient = await db.one(
-      "UPDATE client SET registration_datetime=$1, username=$2, email=$3, password=$4, profile_picture=$5 WHERE id=$6 RETURNING *;",
-      [registration_datetime, username, email, password, profile_picture, id]
+      "UPDATE client SET registration_datetime=$1, username=$2, email=$3, password=$4, profile_picture=$5, role=$6 WHERE id=$7 RETURNING *;",
+      [registration_datetime, username, email, password, profile_picture, role, id]
     );
     return { success: true, payload: updatedClient };
   } catch (error) {
