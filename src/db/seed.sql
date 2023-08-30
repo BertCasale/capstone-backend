@@ -12,7 +12,7 @@ INSERT INTO ads
 (created_datetime, title, start_datetime, end_datetime, content_title, content_text, content_image, content_map_data)
 VALUES
 ('2023-08-29', 'promo1', '2023-08-29', '2023-12-31', 'placeholder1', 'placeholder1_text', 'none', 'none'),
-('2023-08-29', 'promo2', '2023-08-29', '2023-12-31', 'placeholder2', 'placeholder2_text', 'none', 'none'),
+('2023-08-29', 'promo2', '2023-08-29', '2023-12-31', 'placeholder2', 'placeholder2_text', 'none', 'none');
 
 INSERT INTO clients
 (registration_datetime, username, email, password, profile_picture, role)
