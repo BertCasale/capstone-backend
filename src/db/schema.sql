@@ -86,5 +86,7 @@ CREATE TABLE lesson_sections (
   information_text VARCHAR(300) NOT NULL,
   interactive_element VARCHAR(80),
   correct_feedback VARCHAR(400),
-  incorrect_feedback VARCHAR(400)
+  incorrect_feedback VARCHAR(400),
+  question VARCHAR(400),
+  image_credit VARCHAR (800)
 );
