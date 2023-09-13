@@ -33,6 +33,7 @@ CREATE TABLE ads (
 -- Create a table for "clients"
 CREATE TABLE clients (
   id SERIAL PRIMARY KEY,
+  providerid VARCHAR(80),
   registration_datetime DATE NOT NULL,
   username VARCHAR(80) NOT NULL,
   email VARCHAR(120),
