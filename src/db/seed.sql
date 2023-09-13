@@ -40,7 +40,19 @@ INSERT INTO lessons
 VALUES
 (1, 'Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper', 'None'),
 (1, 'Elements of Art', 'Value', '10 Minutes', 'Very Easy', 'Learn another basic of art, value.', 'Pen or Pencil, Paper', 'None'),
-(1, 'Elements of Art', 'Color', '20 Minutes', 'Easy', 'Start creating more meaningful art by learning colors.', 'Colored Pencils, Paper', 'None');
+(1, 'Elements of Art', 'Color', '20 Minutes', 'Easy', 'Start creating more meaningful art by learning colors.', 'Colored Pencils, Paper', 'None'),
+(2, '元素艺术', '线条', '15分钟', '非常简单', '从学习线条的基础开始，掌握艺术的基本要素', '钢笔或铅笔，纸张', '无'),
+(2, '元素艺术', '色值', '10分钟', '非常简单', '了解艺术的另一个基本要素，色值', '钢笔或铅笔，纸张', '无'),
+(2, '元素艺术', '颜色', '20分钟', '容易', '通过学习颜色开始创作更有意义的艺术品', '彩色铅笔，纸张', '无'),
+(3, '藝術元素', '線條', '15分鐘', '非常容易', '以學習線條的基本知識為開始，掌握藝術的基本要素', '鋼筆或鉛筆，紙張', '無'),
+(3, '藝術元素', '色調', '10分鐘', '非常容易', '學習藝術的另一個基本要素，色調', '鋼筆或鉛筆，紙張', '無'),
+(3, '藝術元素', '顏色', '20分鐘', '容易', '通過學習顏色開始創作更有意義的藝術作品', '彩色鉛筆，紙張', '無'),
+(4, 'Elementos de Arte', 'Líneas', '15 minutos', 'Muy fácil', 'Comienza con lo básico del arte aprendiendo acerca de las líneas', 'Pluma o lápiz, papel', 'Ninguno'),
+(4, 'Elementos de Arte', 'Valor', '10 minutos', 'Muy fácil', 'Aprende otro concepto básico del arte, el valor', 'Pluma o lápiz, papel', 'Ninguno'),
+(4, 'Elementos de Arte', 'Color', '20 minutos', 'Fácil', 'Comienza a crear arte más significativo aprendiendo sobre los colores', 'Lápices de colores, papel', 'Ninguno'),
+(5, 'عناصر الفن', 'الخطوط', '15 دقيقة', 'سهل جداً', 'ابدأ بأساسيات الفن من خلال تعلم الخطوط', 'قلم أو قلم رصاص، ورقة', 'لا شيء'),
+(5, 'عناصر الفن', 'القيمة', '10 دقائق', 'سهل جداً', 'تعلم مفهوم آخر أساسي للفن، القيمة', 'قلم أو قلم رصاص، ورقة', 'لا شيء'),
+(5, 'عناصر الفن', 'اللون', '20 دقيقة', 'سهل', 'ابدأ في إنشاء فن أكثر معنىً عن طريق تعلم الألوان', 'ألوان ملونة، ورقة', 'لا شيء');
 
 INSERT INTO client_achievements
 (client_id, achievement_id)
