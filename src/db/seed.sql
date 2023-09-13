@@ -59,21 +59,18 @@ VALUES
 (7, 'Unsur Seni', 'Garis', '15 Menit', 'Sangat Mudah', 'Mulai dengan dasar seni dengan mempelajari tentang garis', 'Pulpen atau pensil, kertas', 'Tidak ada'),
 (7, 'Unsur Seni', 'Nilai', '10 Menit', 'Sangat Mudah', 'Pelajari unsur dasar seni lainnya, yaitu nilai', 'Pulpen atau pensil, kertas', 'Tidak ada'),
 (7, 'Unsur Seni', 'Warna', '20 Menit', 'Mudah', 'Mulai membuat seni yang lebih berarti dengan mempelajari warna', 'Pensil warna, kertas', 'Tidak ada'),
-(8, 'Unsur Seni', 'Garis', '15 Menit', 'Sangat Mudah', 'Mulai dengan dasar seni dengan mempelajari tentang garis', 'Pulpen atau pensil, kertas', 'Tidak ada'),
-(8, 'Unsur Seni', 'Nilai', '10 Menit', 'Sangat Mudah', 'Pelajari unsur dasar seni lainnya, yaitu nilai', 'Pulpen atau pensil, kertas', 'Tidak ada'),
-(8, 'Unsur Seni', 'Warna', '20 Menit', 'Mudah', 'Mulai membuat seni yang lebih berarti dengan mempelajari warna', 'Pensil warna, kertas', 'Tidak ada'),
-(9, 'Éléments d''Art', 'Lignes', '15 minutes', 'Très facile', 'Commencez par les bases de l''art en apprenant les lignes', 'Stylo ou crayon, papier', 'Aucun'),
-(9, 'Éléments d''Art', 'Valeur', '10 minutes', 'Très facile', 'Apprenez un autre concept de base de l''art, la valeur', 'Stylo ou crayon, papier', 'Aucun'),
-(9, 'Éléments de l''Art', 'Couleur', '20 Minutes', 'Facile', 'Commencez à créer de l''art plus significatif en apprenant les couleurs.', 'Crayons de Couleur, Papier', 'Aucun'),
-(10, '芸術の要素', '線', '15 分', '非常に簡単', '線について学んで芸術の基本を始めましょう', 'ペンまたは鉛筆、紙', 'なし'),
-(10, '芸術の要素', 'バリュー', '10 分', '非常に簡単', 'もう一つの芸術の基本、バリューを学びましょう', 'ペンまたは鉛筆、紙', 'なし'),
-(10, '芸術の要素', 'カラー', '20 分', '簡単', '色を学ぶことで、より意味のあるアートを始めましょう', '色鉛筆、紙', 'なし'),
-(11, 'Элементы Искусства', 'Линии', '15 Минут', 'Очень Просто', 'Начните с основ искусства, изучая линии', 'Ручка или карандаш, Бумага', 'Ничего'),
-(11, 'Элементы Искусства', 'Значение', '10 Минут', 'Очень Просто', 'Учите еще один базовый элемент искусства - значение', 'Ручка или карандаш, Бумага', 'Ничего'),
-(11, 'Элементы Искусства', 'Цвет', '20 Минут', 'Легко', 'Начните создавать более значимое искусство, изучая цвета', 'Цветные карандаши, Бумага', 'Ничего'),
-(12, 'Elemente der Kunst', 'Linien', '15 Minuten', 'Sehr Einfach', 'Beginnen Sie mit den Grundlagen der Kunst, indem Sie Linien lernen', 'Stift oder Bleistift, Papier', 'Keine'),
-(12, 'Elemente der Kunst', 'Wert', '10 Minuten', 'Sehr Einfach', 'Lernen Sie ein weiteres Grundkonzept der Kunst, den Wert', 'Stift oder Bleistift, Papier', 'Keine'),
-(12, 'Elemente der Kunst', 'Farbe', '20 Minuten', 'Einfach', 'Beginnen Sie, aussagekräftigere Kunstwerke zu schaffen, indem Sie Farben lernen', 'Buntstifte, Papier', 'Keine');
+(8, 'Éléments d''Art', 'Lignes', '15 minutes', 'Très facile', 'Commencez par les bases de l''art en apprenant les lignes', 'Stylo ou crayon, papier', 'Aucun'),
+(8, 'Éléments d''Art', 'Valeur', '10 minutes', 'Très facile', 'Apprenez un autre concept de base de l''art, la valeur', 'Stylo ou crayon, papier', 'Aucun'),
+(8, 'Éléments de l''Art', 'Couleur', '20 Minutes', 'Facile', 'Commencez à créer de l''art plus significatif en apprenant les couleurs.', 'Crayons de Couleur, Papier', 'Aucun'),
+(9, '芸術の要素', '線', '15 分', '非常に簡単', '線について学んで芸術の基本を始めましょう', 'ペンまたは鉛筆、紙', 'なし'),
+(9, '芸術の要素', 'バリュー', '10 分', '非常に簡単', 'もう一つの芸術の基本、バリューを学びましょう', 'ペンまたは鉛筆、紙', 'なし'),
+(9, '芸術の要素', 'カラー', '20 分', '簡単', '色を学ぶことで、より意味のあるアートを始めましょう', '色鉛筆、紙', 'なし'),
+(9, 'Элементы Искусства', 'Линии', '15 Минут', 'Очень Просто', 'Начните с основ искусства, изучая линии', 'Ручка или карандаш, Бумага', 'Ничего'),
+(10, 'Элементы Искусства', 'Значение', '10 Минут', 'Очень Просто', 'Учите еще один базовый элемент искусства - значение', 'Ручка или карандаш, Бумага', 'Ничего'),
+(10, 'Элементы Искусства', 'Цвет', '20 Минут', 'Легко', 'Начните создавать более значимое искусство, изучая цвета', 'Цветные карандаши, Бумага', 'Ничего'),
+(11, 'Elemente der Kunst', 'Linien', '15 Minuten', 'Sehr Einfach', 'Beginnen Sie mit den Grundlagen der Kunst, indem Sie Linien lernen', 'Stift oder Bleistift, Papier', 'Keine'),
+(11, 'Elemente der Kunst', 'Wert', '10 Minuten', 'Sehr Einfach', 'Lernen Sie ein weiteres Grundkonzept der Kunst, den Wert', 'Stift oder Bleistift, Papier', 'Keine'),
+(11, 'Elemente der Kunst', 'Farbe', '20 Minuten', 'Einfach', 'Beginnen Sie, aussagekräftigere Kunstwerke zu schaffen, indem Sie Farben lernen', 'Buntstifte, Papier', 'Keine');
 
 INSERT INTO client_achievements
 (client_id, achievement_id)
