@@ -15,10 +15,10 @@ VALUES
 ('2023-08-29', 'promo2', '2023-08-29', '2023-12-31', 'placeholder2', 'placeholder2_text', 'none', 'none');
 
 INSERT INTO clients
-(registration_datetime, username, email, password, profile_picture, role)
+(providerid, registration_datetime, username, email, password, profile_picture, role)
 VALUES
-('2023-08-01', 'Alexia Apple', 'alexia@gmail.com', 'apassword', 'none', 'Administrator'),
-('2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none', 'Student');
+(NULL, '2023-08-01', 'Alexia Apple', 'alexia@gmail.com', 'apassword', 'none', 'Administrator'),
+(NULL, '2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none', 'Student');
 
 INSERT INTO languages
 (created_datetime, name, image)
