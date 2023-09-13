@@ -52,7 +52,16 @@ VALUES
 (4, 'Elementos de Arte', 'Color', '20 minutos', 'Fácil', 'Comienza a crear arte más significativo aprendiendo sobre los colores', 'Lápices de colores, papel', 'Ninguno'),
 (5, 'عناصر الفن', 'الخطوط', '15 دقيقة', 'سهل جداً', 'ابدأ بأساسيات الفن من خلال تعلم الخطوط', 'قلم أو قلم رصاص، ورقة', 'لا شيء'),
 (5, 'عناصر الفن', 'القيمة', '10 دقائق', 'سهل جداً', 'تعلم مفهوم آخر أساسي للفن، القيمة', 'قلم أو قلم رصاص، ورقة', 'لا شيء'),
-(5, 'عناصر الفن', 'اللون', '20 دقيقة', 'سهل', 'ابدأ في إنشاء فن أكثر معنىً عن طريق تعلم الألوان', 'ألوان ملونة، ورقة', 'لا شيء');
+(5, 'عناصر الفن', 'اللون', '20 دقيقة', 'سهل', 'ابدأ في إنشاء فن أكثر معنىً عن طريق تعلم الألوان', 'ألوان ملونة، ورقة', 'لا شيء'),
+(6, 'Elementos de Arte', 'Linhas', '15 minutos', 'Muito fácil', 'Comece com o básico da arte, aprendendo sobre linhas', 'Caneta ou lápis, papel', 'Nenhum'),
+(6, 'Elementos de Arte', 'Valor', '10 minutos', 'Muito fácil', 'Aprenda outro conceito básico da arte, o valor', 'Caneta ou lápis, papel', 'Nenhum'),
+(6, 'Elementos de Arte', 'Cor', '20 minutos', 'Fácil', 'Comece a criar arte mais significativa aprendendo sobre cores', 'Lápis de cor, papel', 'Nenhum'),
+(7, 'Unsur Seni', 'Garis', '15 Menit', 'Sangat Mudah', 'Mulai dengan dasar seni dengan mempelajari tentang garis', 'Pulpen atau pensil, kertas', 'Tidak ada'),
+(7, 'Unsur Seni', 'Nilai', '10 Menit', 'Sangat Mudah', 'Pelajari unsur dasar seni lainnya, yaitu nilai', 'Pulpen atau pensil, kertas', 'Tidak ada'),
+(7, 'Unsur Seni', 'Warna', '20 Menit', 'Mudah', 'Mulai membuat seni yang lebih berarti dengan mempelajari warna', 'Pensil warna, kertas', 'Tidak ada'),
+(8, 'Unsur Seni', 'Garis', '15 Menit', 'Sangat Mudah', 'Mulai dengan dasar seni dengan mempelajari tentang garis', 'Pulpen atau pensil, kertas', 'Tidak ada'),
+(8, 'Unsur Seni', 'Nilai', '10 Menit', 'Sangat Mudah', 'Pelajari unsur dasar seni lainnya, yaitu nilai', 'Pulpen atau pensil, kertas', 'Tidak ada'),
+(8, 'Unsur Seni', 'Warna', '20 Menit', 'Mudah', 'Mulai membuat seni yang lebih berarti dengan mempelajari warna', 'Pensil warna, kertas', 'Tidak ada');
 
 INSERT INTO client_achievements
 (client_id, achievement_id)
