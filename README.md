@@ -76,17 +76,17 @@ test > unit:  similar to src, not used
 
 Sources:
 Language selection based on https://www.internetworldstats.com/stats7.htm
-('2023-08-29', 'English (US)'),
-('2023-08-29', 'Chinese, Simplified'),
-('2023-08-29', 'Chinese, Traditional'),
-('2023-08-29', 'Spanish'),
-('2023-08-29', 'Arabic'),
-('2023-08-29', 'Portuguese'),
-('2023-08-29', 'Indonesian'),
-('2023-08-29', 'French'),
-('2023-08-29', 'Japanese'),
-('2023-08-29', 'Russian'),
-('2023-08-29', 'German');
+1 ('2023-08-29', 'English (US)'),
+2 ('2023-08-29', 'Chinese, Simplified'),
+3 ('2023-08-29', 'Chinese, Traditional'),
+4 ('2023-08-29', 'Spanish'),
+5 ('2023-08-29', 'Arabic'),
+6 ('2023-08-29', 'Portuguese'),
+7 ('2023-08-29', 'Indonesian'),
+8 ('2023-08-29', 'French'),
+9 ('2023-08-29', 'Japanese'),
+10 ('2023-08-29', 'Russian'),
+11 ('2023-08-29', 'German');
 
 ('2023-08-29', 'English (US)'),
 ('2023-08-29', '简体中文'),
