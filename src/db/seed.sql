@@ -1,6 +1,6 @@
 -- psql -U postgres -f src/db/seed.sql
 
-\c acorn_dev;
+
 
 INSERT INTO achievements
 (name, description, image)

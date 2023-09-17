@@ -1,13 +1,13 @@
 -- psql -U postgres -f src/db/schema.sql
 
--- IF already exists, drop it.
-DROP DATABASE IF EXISTS acorn_dev;
-
--- Create our database
-CREATE DATABASE acorn_dev;
-
--- Connect to the db
-\c acorn_dev;
+DROP TABLE IF EXISTS achievements;
+DROP TABLE IF EXISTS ads;
+DROP TABLE IF EXISTS clients;
+DROP TABLE IF EXISTS languages;
+DROP TABLE IF EXISTS lessons;
+DROP TABLE IF EXISTS client_achievements;
+DROP TABLE IF EXISTS client_lessons_progress;
+DROP TABLE IF EXISTS lesson_sections;
 
 -- Create a table for "achievements"
 CREATE TABLE achievements (
