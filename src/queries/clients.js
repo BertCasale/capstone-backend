@@ -23,6 +23,7 @@ const getOneClient = async (id) => {
 //create query
 const createClient = async (clientToAdd) => {
   const {
+    providerid,
     registration_datetime,
     username,
     email,
@@ -33,8 +34,8 @@ const createClient = async (clientToAdd) => {
 
   try {
     const newClient = await db.one(
-      "INSERT INTO clients (registration_datetime, username, email, password, profile_picture, role) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *;",
-      [registration_datetime, username, email, password, profile_picture, role]
+      "INSERT INTO clients (providerid, registration_datetime, username, email, password, profile_picture, role) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;",
+      [providerid, registration_datetime, username, email, password, profile_picture, role]
     );
     return { success: true, payload: newClient };
   } catch (error) {
@@ -54,7 +55,8 @@ const deleteClient = async (id) => {
 
 //update query
 const updateClient = async (id, clientToUpdate) => {
-  const { 
+  const {
+    providerid, 
     registration_datetime,
     username,
     email,
@@ -65,8 +67,8 @@ const updateClient = async (id, clientToUpdate) => {
 
   try {
     const updatedClient = await db.one(
-      "UPDATE client SET registration_datetime=$1, username=$2, email=$3, password=$4, profile_picture=$5, role=$6 WHERE id=$7 RETURNING *;",
-      [registration_datetime, username, email, password, profile_picture, role, id]
+      "UPDATE client SET providerid=$1, registration_datetime=$2, username=$3, email=$4, password=$5, profile_picture=$6, role=$7 WHERE id=$8 RETURNING *;",
+      [providerid, registration_datetime, username, email, password, profile_picture, role, id]
     );
     return { success: true, payload: updatedClient };
   } catch (error) {
