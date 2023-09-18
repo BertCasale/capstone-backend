@@ -3,7 +3,7 @@ const lessonSectionsByLanguage = express.Router();
 
 const {
   getAllLessonSectionsByLanguage,
-  getAllLessonSectionsByLanguageByLessonId,
+  getAllLessonSectionsByLessonByLanguage,
   createLessonSectionByLanguage,
   deleteLessonSectionByLanguage,
   updateLessonSectionByLanguage
@@ -22,9 +22,11 @@ lessonSectionsByLanguage.get('/:language_id', async (req, res) => {
 })
 
 //show route (changed to index of lesson sections, by lesson)
-lessonSectionsByLessonIdByLanguage.get('/:lesson_id/:language_id', async (req, res) => {
+lessonSectionsByLanguage.get('/:lesson_id/:language_id', async (req, res) => {
   const { lesson_id, language_id } = req.params;
-  const allLessonSectionsByLessonIdByLanguage = await getAllLessonSectionsByLessonIdByLanguage(lesson_id, language_id);
+  //correctly prints to terminal
+  console.log("lessonID", lesson_id, "languageID", language_id);
+  const allLessonSectionsByLessonIdByLanguage = await getAllLessonSectionsByLessonByLanguage(lesson_id, language_id);
 
   if (allLessonSectionsByLessonIdByLanguage.success) {
     res.status(200).json(allLessonSectionsByLessonIdByLanguage.payload);
@@ -34,7 +36,7 @@ lessonSectionsByLessonIdByLanguage.get('/:lesson_id/:language_id', async (req, r
 })
 
 //create route
-lessonSectionByLanguage.post('/', async (req, res) => {
+lessonSectionsByLanguage.post('/', async (req, res) => {
   const newLessonSectionByLanguage = req.body;
   const createdLessonSectionByLanguage = await createLessonSectionByLanguage(newLessonSectionByLanguage);
 
@@ -46,7 +48,7 @@ lessonSectionByLanguage.post('/', async (req, res) => {
 })
 
 //delete route
-lessonSectionByLanguage.delete('/:id', async (req, res) => {
+lessonSectionsByLanguage.delete('/:id', async (req, res) => {
   const { id } = req.params;
   const deletedLessonSectionByLanguage = await deleteLessonSectionByLanguage(id);
 
@@ -58,7 +60,7 @@ lessonSectionByLanguage.delete('/:id', async (req, res) => {
 })
 
 //update route
-lessonSectionByLanguage.put('/:id', async (req, res) => {
+lessonSectionsByLanguage.put('/:id', async (req, res) => {
   const { id } = req.params;
   const editLessonSectionByLanguage = req.body;
   const updatedLessonSectionByLanguage = await updateLessonSectionByLanguage(id, editLessonSectionByLanguage);
