@@ -83,7 +83,7 @@ Language selection based on https://www.internetworldstats.com/stats7.htm
 5 ('2023-08-29', 'Arabic'),
 6 ('2023-08-29', 'Portuguese'),
 7 ('2023-08-29', 'Indonesian'),
-8 ('2023-08-29', 'French'),
+8 ('2023-08-29', 'French'),   
 9 ('2023-08-29', 'Japanese'),
 10 ('2023-08-29', 'Russian'),
 11 ('2023-08-29', 'German');
