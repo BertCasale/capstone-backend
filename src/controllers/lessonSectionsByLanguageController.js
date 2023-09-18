@@ -24,7 +24,7 @@ lessonSectionsByLanguage.get('/:language_id', async (req, res) => {
 //show route (changed to index of lesson sections, by lesson)
 lessonSectionsByLessonIdByLanguage.get('/:lesson_id/:language_id', async (req, res) => {
   const { lesson_id, language_id } = req.params;
-  const allLessonSectionsByLessonIdByLanguage = await getAllLessonSectionsByLanguageByLessonId(lesson_id, language_id);
+  const allLessonSectionsByLessonIdByLanguage = await getAllLessonSectionsByLessonIdByLanguage(lesson_id, language_id);
 
   if (allLessonSectionsByLessonIdByLanguage.success) {
     res.status(200).json(allLessonSectionsByLessonIdByLanguage.payload);

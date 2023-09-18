@@ -1,13 +1,13 @@
 -- psql -U postgres -f src/db/schema.sql
 
-DROP TABLE IF EXISTS achievements;
-DROP TABLE IF EXISTS ads;
-DROP TABLE IF EXISTS clients;
-DROP TABLE IF EXISTS languages;
-DROP TABLE IF EXISTS lessons;
+DROP TABLE IF EXISTS achievements CASCADE;
+DROP TABLE IF EXISTS ads CASCADE;
+DROP TABLE IF EXISTS clients CASCADE;
+DROP TABLE IF EXISTS languages CASCADE;
+DROP TABLE IF EXISTS lessons CASCADE;
 DROP TABLE IF EXISTS client_achievements;
-DROP TABLE IF EXISTS client_lessons_progress;
-DROP TABLE IF EXISTS lesson_sections;
+DROP TABLE IF EXISTS client_lessons_progress CASCADE;
+DROP TABLE IF EXISTS lesson_sections CASCADE;
 
 -- Create a table for "achievements"
 CREATE TABLE achievements (
@@ -83,11 +83,11 @@ CREATE TABLE lesson_sections (
   id SERIAL PRIMARY KEY,
   lesson_id INT REFERENCES lessons (id) ON DELETE CASCADE,
   language_id INT REFERENCES languages (id) ON DELETE CASCADE NOT NULL,
-  title VARCHAR(80) NOT NULL,
-  information_text VARCHAR(300) NOT NULL,
-  interactive_element VARCHAR(80),
-  correct_feedback VARCHAR(400),
-  incorrect_feedback VARCHAR(400),
-  question VARCHAR(400),
+  title VARCHAR(200) NOT NULL,
+  information_text VARCHAR(600) NOT NULL,
+  interactive_element VARCHAR(200),
+  correct_feedback VARCHAR(600),
+  incorrect_feedback VARCHAR(600),
+  question VARCHAR(800),
   image_credit VARCHAR (800)
 );
