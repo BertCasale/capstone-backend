@@ -17,6 +17,7 @@ const clientsController = require("./src/controllers/clientsController.js");
 const languagesController = require("./src/controllers/languagesController.js");
 const lessonsController = require("./src/controllers/lessonsController.js");
 const lessonSectionsController = require("./src/controllers/lessonSectionsController.js");
+const lessonSectionsByLanguageController = require("./src/controllers/lessonSectionsByLanguageController.js");
 
 app.use("/achievements", achievementsController);
 app.use("/ads", adsController);
@@ -26,6 +27,7 @@ app.use("/clients", clientsController);
 app.use("/languages", languagesController);
 app.use("/lessons", lessonsController);
 app.use("/lessonSections", lessonSectionsController);
+app.use("/lessonSectionsByLanguage", lessonSectionsByLanguageController);
 
 // ROUTES
 app.get("/", (req, res) => {
