@@ -21,9 +21,9 @@ lessonTopContent2.get('/', async (req, res) => {
 })
 
 //show route
-lessonTopContent2.get('/:id', async (req, res) => {
-  const { id } = req.params;
-  const oneLessonTopContent2 = await getOneLessonTopContent2(id);
+lessonTopContent2.get('/:language_id/:lesson_id', async (req, res) => {
+  const { language_id, lesson_id } = req.params;
+  const oneLessonTopContent2 = await getOneLessonTopContent2(language_id, lesson_id);
 
   if (oneLessonTopContent2.success) {
     res.status(200).json(oneLessonTopContent2.payload);
