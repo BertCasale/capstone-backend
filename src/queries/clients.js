@@ -67,7 +67,7 @@ const updateClient = async (id, clientToUpdate) => {
 
   try {
     const updatedClient = await db.one(
-      "UPDATE client SET providerid=$1, registration_datetime=$2, username=$3, email=$4, password=$5, profile_picture=$6, role=$7 WHERE id=$8 RETURNING *;",
+      "UPDATE clients SET providerid=$1, registration_datetime=$2, username=$3, email=$4, password=$5, profile_picture=$6, role=$7 WHERE id=$8 RETURNING *;",
       [providerid, registration_datetime, username, email, password, profile_picture, role, id]
     );
     return { success: true, payload: updatedClient };

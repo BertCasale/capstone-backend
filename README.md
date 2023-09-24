@@ -5,9 +5,13 @@
 Example of .env
 
 PORT=3000
+
 PG_HOST=localhost
+
 PG_PORT=5000
+
 PG_DATABASE=acorn_dev
+
 PG_USER=postgres
 
 (can use different PORT and PG_PORT).
@@ -19,8 +23,11 @@ Ensure Postgres running.
 In terminal, enter
 
 node src/db/init-db.js
+
 psql -U postgres -f src/db/schema.sql
+
 psql -U postgres -f src/db/seed.sql
+
 npm start
 
 in browser
