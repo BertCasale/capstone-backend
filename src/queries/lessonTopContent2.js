@@ -11,9 +11,9 @@ const getAllLessonsTopContent2 = async () => {
 }
 
 //show query
-const getOneLessonTopContent2 = async (id) => {
+const getOneLessonTopContent2 = async (language_id, lesson_id) => {
   try {
-    const oneLessonTopContent2 = await db.one("SELECT * FROM lesson_topcontent2 WHERE id=$1;", id);
+    const oneLessonTopContent2 = await db.one("SELECT * FROM lesson_topcontent2 WHERE language_id=$1 AND lessons2_id=$2;", [language_id, lesson_id]);
     return { success: true, payload: oneLessonTopContent2 };
   } catch (error) {
     return { success: false, payload: error };

@@ -18,7 +18,7 @@ Used 'id' as placeholder.
 */
 const getAllLessonSectionsByLanguageByLesson2 = async (language_id, lesson_id) => {
   try {
-    const allLessonSectionsByLessonByLanguage2 = await db.any("SELECT * FROM lesson_sections2 WHERE language_id=$1 AND lessons2_id=$2 ORDER BY id ASC;", [language_id, lesson_id]);
+    const allLessonSectionsByLessonByLanguage2 = await db.any("SELECT * FROM lesson_sections2 WHERE language_id=$1 AND lessons2_id=$2", [language_id, lesson_id]);
     //console.log("INPUTS", language_id, lesson_id);
     //console.log("OUTPUTS", allLessonSectionsByLessonIdByLanguage2);
     return { success: true, payload: allLessonSectionsByLessonByLanguage2 };
