@@ -1,9 +1,9 @@
 const db = require('../db/dbConfig.js');
 
-//index query
+//index by language query
 const getAllLessonSectionsByLanguage = async (language_id) => {
   try {
-    const allLessonSectionsByLanguage = await db.any("SELECT * FROM lesson_sections WHERE language_id=$1 ORDER BY id ASC");
+    const allLessonSectionsByLanguage = await db.any("SELECT * FROM lesson_sections WHERE language_id=$1 ORDER BY id ASC", language_id);
     return { success: true, payload: allLessonSectionsByLanguage };
   } catch (error) {
     return { success: false, payload: error };
@@ -19,8 +19,8 @@ Used 'id' as placeholder.
 const getAllLessonSectionsByLessonByLanguage = async (lesson_id, language_id) => {
   try {
     const allLessonSectionsByLessonIdByLanguage = await db.any("SELECT * FROM lesson_sections WHERE lesson_id=$1 AND language_id=$2 ORDER BY id ASC;", [lesson_id, language_id]);
-    console.log("INPUTS", lesson_id, language_id);
-    console.log("OUTPUTS", allLessonSectionsByLessonIdByLanguage);
+    //console.log("INPUTS", lesson_id, language_id);
+    //console.log("OUTPUTS", allLessonSectionsByLessonIdByLanguage);
     return { success: true, payload: allLessonSectionsByLessonIdByLanguage };
   } catch (error) {
     return { success: false, payload: error };
