@@ -59,7 +59,7 @@ const updateLesson2 = async (id, lessonToUpdate2) => {
 
   try {
     const updatedLesson2 = await db.one(
-      "UPDATE lessons2 SET engcat=$1, engtit=$2, engmin WHERE id=$4 RETURNING *;",
+      "UPDATE lessons2 SET engcat=$1, engtit=$2, engmin=$3 WHERE id=$4 RETURNING *;",
       [engcat, engtit, engmin, id]
     );
     return { success: true, payload: updatedLesson2 };

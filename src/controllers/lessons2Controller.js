@@ -60,7 +60,7 @@ lessons2.delete('/:id', async (req, res) => {
 lessons2.put('/:id', async (req, res) => {
   const { id } = req.params;
   const editLesson2 = req.body;
-  const updatedLesson2 = await updateLesson2(id, editLesson);
+  const updatedLesson2 = await updateLesson2(id, editLesson2);
 
   if (updatedLesson2.success) {
     res.status(200).json(updatedLesson2.payload);

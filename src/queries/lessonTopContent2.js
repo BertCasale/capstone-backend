@@ -3,8 +3,8 @@ const db = require('../db/dbConfig.js');
 //index query
 const getAllLessonsTopContent2 = async () => {
   try {
-    const allLessonsTopContent2 = await db.any("SELECT * FROM lesson_topcontent2, ORDER BY id ASC");
-    return { success: true, payload: allLessonsTopContent2, };
+    const allLessonsTopContent2 = await db.any("SELECT * FROM lesson_topcontent2 ORDER BY id ASC");
+    return { success: true, payload: allLessonsTopContent2 };
   } catch (error) {
     return { success: false, payload: error };
   }
@@ -36,7 +36,7 @@ const createLessonTopContent2 = async (lessonToAdd) => {
 
   try {
     const newLessonTopContent2 = await db.one(
-      "INSERT INTO lesson_topcontent2, (language_id, lessons2_id, category, title, duration, difficulty, description, materials, preview) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *;",
+      "INSERT INTO lesson_topcontent2 (language_id, lessons2_id, category, title, duration, difficulty, description, materials, preview) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *;",
       [language_id, lessons2_id, category, title, duration, difficulty, description, materials, preview]
     );
     return { success: true, payload: newLessonTopContent2 };
@@ -48,7 +48,7 @@ const createLessonTopContent2 = async (lessonToAdd) => {
 //delete query
 const deleteLessonTopContent2 = async (id) => {
   try {
-    const deletedLessonTopContent2 = await db.one("DELETE FROM lesson_topcontent2, WHERE id=$1 RETURNING *;", id);
+    const deletedLessonTopContent2 = await db.one("DELETE FROM lesson_topcontent2 WHERE id=$1 RETURNING *;", id);
     return { success: true, payload: deletedLessonTopContent2 };
   } catch (error) {
     return { success: false, payload: error };
@@ -71,7 +71,7 @@ const updateLessonTopContent2 = async (id, lessonToUpdate) => {
 
   try {
     const updatedLessonTopContent2 = await db.one(
-      "UPDATE lesson_topcontent2, SET language_id=$1, lessons2_id=$2, category=$3, title=$4, duration=$5, difficulty=$6, description=$7, materials=$8, preview=$9 WHERE id=$10 RETURNING *;",
+      "UPDATE lesson_topcontent2 SET language_id=$1, lessons2_id=$2, category=$3, title=$4, duration=$5, difficulty=$6, description=$7, materials=$8, preview=$9 WHERE id=$10 RETURNING *;",
       [language_id, lessons2_id, category, title, duration, difficulty, description, materials, preview, id]
     );
     return { success: true, payload: updatedLessonTopContent2 };

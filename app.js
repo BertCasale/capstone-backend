@@ -27,7 +27,7 @@ app.use("/ads", adsController);
 app.use("/clientAchievements", clientAchievementsController);
 app.use("/clientLessonsProgress", clientLessonsProgressController);
 app.use("/clients", clientsController);
-app.use("/languages", languagesController);
+app.use("/languages", languagesController); 
 app.use("/lessons", lessonsController);
 app.use("/lessons2", lessons2Controller);
 app.use("/lessonSections", lessonSectionsController);

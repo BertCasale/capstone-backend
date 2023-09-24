@@ -17,7 +17,9 @@ INSERT INTO clients
 (providerid, registration_datetime, username, email, password, profile_picture, role)
 VALUES
 (NULL, '2023-08-01', 'Alexia Apple', 'alexia@gmail.com', 'apassword', 'none', 'Administrator'),
-(NULL, '2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none', 'Student');
+(NULL, '2023-08-02', 'Bartholomew Bagel', 'barty@gmail.com', 'bpassword', 'none', 'Student'),
+('gcjdVQNF6lWL3wMqxYaKgo3MJrV2', '2023-09-24T00:00:00.000Z', 'keri', 'keri@example.com', 'keri123@1', 'none', 'Administrator'),
+('qzgNsWpwD6eSYthn3B8IxizvgNC3', '2023-09-24T00:00:00.000Z', 'student', 'student@example.com', 'student123@1', 'none', 'Student');
 
 INSERT INTO languages
 (created_datetime, name, image)

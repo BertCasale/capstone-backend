@@ -18,6 +18,7 @@ If .env file values change, npm start process must shut down then restart to use
 Ensure Postgres running.
 In terminal, enter
 
+node src/db/init-db.js
 psql -U postgres -f src/db/schema.sql
 psql -U postgres -f src/db/seed.sql
 npm start
@@ -28,6 +29,7 @@ http://localhost:3177/clientLessonsProgress/1
 
 (or similar) to test routes.
 
+2023 Sep 24 - Note:  node src/db/init-db.js in terminal directly updates deployed database with changes.
 
 ==
 
