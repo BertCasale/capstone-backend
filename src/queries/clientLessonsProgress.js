@@ -24,14 +24,14 @@ const getAllClientLessonsProgressByClientId = async (id) => {
 const createClientLessonProgress = async (clientLessonProgressToAdd) => {
   const {
     client_id,
-    lesson_id,
+    lessons2_id,
     lesson_completion_status
   } = clientLessonProgressToAdd;
 
   try {
     const newClientLessonProgress = await db.one(
-      "INSERT INTO client_lessons_progress (client_id, lesson_id, lesson_completion_status) VALUES ($1, $2, $3) RETURNING *;",
-      [client_id, lesson_id, lesson_completion_status]
+      "INSERT INTO client_lessons_progress (client_id, lessons2_id, lesson_completion_status) VALUES ($1, $2, $3) RETURNING *;",
+      [client_id, lessons2_id, lesson_completion_status]
     );
     return { success: true, payload: newClientLessonProgress };
   } catch (error) {
@@ -53,14 +53,14 @@ const deleteClientLessonProgress = async (id) => {
 const updateClientLessonProgress = async (id, clientLessonProgressToUpdate) => {
   const { 
     client_id,
-    lesson_id,
+    lessons2_id,
     lesson_completion_status
   } = clientLessonProgressToUpdate;
 
   try {
     const updatedClientLessonProgress = await db.one(
-      "UPDATE client_lessons_progress SET client_id=$1, lesson_id=$2, lesson_completion_status=$3 WHERE id=$4 RETURNING *;",
-      [client_id, lesson_id, lesson_completion_status, id]
+      "UPDATE client_lessons_progress SET client_id=$1, lessons2_id=$2, lesson_completion_status=$3 WHERE id=$4 RETURNING *;",
+      [client_id, lessons2_id, lesson_completion_status, id]
     );
     return { success: true, payload: updatedClientLessonProgress };
   } catch (error) {
