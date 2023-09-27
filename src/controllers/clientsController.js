@@ -19,11 +19,11 @@ clients.get('/', async (req, res) => {
     res.status(400).json({ error: `Error: ${allClients.payload}` });
   }
 })
-
+//gt
 //show route
 clients.get('/:providerid', async (req, res) => {
   const { providerid } = req.params;
-  const oneClient = await getOneClient(id);
+  const oneClient = await getOneClient(providerid);
 
   if (oneClient.success) {
     res.status(200).json(oneClient.payload);
