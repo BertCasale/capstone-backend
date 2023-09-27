@@ -1,5 +1,5 @@
 const db = require('../db/dbConfig.js');
-
+//gt
 //index query
 const getAllClients = async () => {
   try {
