@@ -1,5 +1,5 @@
 const db = require('../db/dbConfig.js');
-
+//gt
 //index query
 const getAllClients = async () => {
   try {
@@ -13,7 +13,7 @@ const getAllClients = async () => {
 //show query
 const getOneClient = async (providerid) => {
   try {
-    const oneClient = await db.one("SELECT * FROM clients WHERE providerid=$1;", id);
+    const oneClient = await db.one("SELECT * FROM clients WHERE providerid=$1;", providerid);
     return { success: true, payload: oneClient };
   } catch (error) {
     return { success: false, payload: error };
