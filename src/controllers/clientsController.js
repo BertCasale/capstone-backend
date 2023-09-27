@@ -21,8 +21,8 @@ clients.get('/', async (req, res) => {
 })
 
 //show route
-clients.get('/:id', async (req, res) => {
-  const { id } = req.params;
+clients.get('/:providerid', async (req, res) => {
+  const { providerid } = req.params;
   const oneClient = await getOneClient(id);
 
   if (oneClient.success) {
