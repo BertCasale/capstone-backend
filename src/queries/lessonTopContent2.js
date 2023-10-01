@@ -1,9 +1,9 @@
 const db = require('../db/dbConfig.js');
 
 //index query
-const getAllLessonsTopContent2 = async () => {
+const getAllLessonsTopContent2 = async (language_id) => {
   try {
-    const allLessonsTopContent2 = await db.any("SELECT * FROM lesson_topcontent2 ORDER BY id ASC");
+    const allLessonsTopContent2 = await db.any("SELECT * FROM lesson_topcontent2 WHERE language_id=$1 ORDER BY id ASC", [language_id]);
     return { success: true, payload: allLessonsTopContent2 };
   } catch (error) {
     return { success: false, payload: error };
