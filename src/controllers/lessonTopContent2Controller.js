@@ -12,7 +12,7 @@ const {
 //index route
 lessonTopContent2.get('/:language_id', async (req, res) => {
   const { language_id } = req.params;
-  const allLessonsTopContent2 = await getAllLessonsTopContent2();
+  const allLessonsTopContent2 = await getAllLessonsTopContent2(language_id);
 
   if (allLessonsTopContent2.success) {
     res.status(200).json(allLessonsTopContent2.payload);
