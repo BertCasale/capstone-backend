@@ -10,7 +10,8 @@ const {
 } = require('../queries/lessonTopContent2.js');
 
 //index route
-lessonTopContent2.get('/', async (req, res) => {
+lessonTopContent2.get('/:language_id', async (req, res) => {
+  const { language_id } = req.params;
   const allLessonsTopContent2 = await getAllLessonsTopContent2();
 
   if (allLessonsTopContent2.success) {
