@@ -39,9 +39,9 @@ VALUES
 INSERT INTO lessons
 (language_id, category, title, duration, difficulty, description, materials, preview)
 VALUES
-(1, 'Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper', 'None'),
-(1, 'Elements of Art', 'Value', '10 Minutes', 'Very Easy', 'Learn another basic of art, value.', 'Pen or Pencil, Paper', 'None'),
-(1, 'Elements of Art', 'Color', '20 Minutes', 'Easy', 'Start creating more meaningful art by learning colors.', 'Colored Pencils, Paper', 'None'),
+(1, 'Elements of Art', 'Lines', '15 Minutes', 'Very Easy', 'Start with the basics of art by learning about lines', 'Pen or Pencil, Paper', 'https://i.ibb.co/KNy2M66/Lines-Preview.png'),
+(1, 'Elements of Art', 'Value', '10 Minutes', 'Very Easy', 'Learn another basic of art, value.', 'Pen or Pencil, Paper', 'https://i.ibb.co/dtfcqYm/Value-Preview.png'),
+(1, 'Elements of Art', 'Color', '20 Minutes', 'Easy', 'Start creating more meaningful art by learning colors.', 'Colored Pencils, Paper', 'https://i.ibb.co/Lx2QSDf/Color-Preview.png'),
 (1, 'PlaceholderCategory1', 'PlaceholderTitle1', '1 Minute', 'Easy', 'Placeholder 1 of 2', 'PlaceholderMaterial1', 'PlaceholderPreview1'),
 (1, 'PlaceholderCategory2', 'PlaceholderTitle2', '2 Minutes', 'Easy', 'Placeholder 2 of 2', 'PlaceholderMaterial2', 'PlaceholderPreview2'),
 (2, '元素艺术', '线条', '15分钟', '非常简单', '从学习线条的基础开始，掌握艺术的基本要素', '钢笔或铅笔，纸张', '无'),
